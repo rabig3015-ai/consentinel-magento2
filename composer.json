@@ -1,0 +1,26 @@
+{
+  "name": "consentinel/module-cookie-consent",
+  "description": "Consentinel Cookie Consent and Pre-Consent Script Blocker with Google Consent Mode v2 for Magento 2",
+  "type": "magento2-module",
+  "version": "1.0.0",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "Consentinel",
+      "email": "support@consentinel.com",
+      "homepage": "https://consentinel.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.4.0 || ~8.1.0 || ~8.2.0 || ~8.3.0",
+    "magento/framework": ">=102.0.0 || >=103.0.0"
+  },
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Consentinel\\CookieConsent\\": ""
+    }
+  }
+}

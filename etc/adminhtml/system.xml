@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Consentinel Cookie Consent System Configuration Definition.
+ *
+ * @category  Consentinel
+ * @package   Consentinel_CookieConsent
+ * @copyright 2026 Consentinel (https://consentinel.com)
+ * @license   GPL-2.0-or-later
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="consentinel" translate="label" sortOrder="900">
+            <label>Consentinel</label>
+        </tab>
+        <section id="consentinel" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Cookie Consent &amp; Pre-Consent Blocker</label>
+            <tab>consentinel</tab>
+            <resource>Consentinel_CookieConsent::config</resource>
+
+            <!-- General Settings -->
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General Settings</label>
+                <field id="enabled" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Consentinel</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Enable or disable Consentinel pre-consent script blocking on storefront.</comment>
+                </field>
+                <field id="enable_gcm_v2" translate="label comment" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Google Consent Mode v2</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Sets default-denied signaling for ad_storage, analytics_storage, ad_user_data, and ad_personalization until explicit user consent.</comment>
+                </field>
+                <field id="auto_show_banner" translate="label comment" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Auto-Show Banner</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Automatically display cookie consent banner to visitors who have not yet consented.</comment>
+                </field>
+            </group>
+
+            <!-- Layout & Design Settings -->
+            <group id="design" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Layout &amp; Styling</label>
+                <field id="layout" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Banner Layout</label>
+                    <source_model>Consentinel\CookieConsent\Model\Config\Source\Layout</source_model>
+                    <comment>Select banner position and format.</comment>
+                </field>
+                <field id="primary_color" translate="label comment" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Primary Accent Color</label>
+                    <comment>Hex color for primary action buttons (e.g., #0f172a).</comment>
+                </field>
+                <field id="primary_text_color" translate="label comment" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Button Text Color</label>
+                    <comment>Text color for primary action buttons (e.g., #ffffff).</comment>
+                </field>
+                <field id="background_color" translate="label comment" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Background Color</label>
+                    <comment>Banner background color (e.g., #ffffff).</comment>
+                </field>
+                <field id="text_color" translate="label comment" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Text Color</label>
+                    <comment>Banner title and description text color (e.g., #1e293b).</comment>
+                </field>
+            </group>
+
+            <!-- Content & Messaging -->
+            <group id="content" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Content &amp; Messaging</label>
+                <field id="title" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Banner Title</label>
+                </field>
+                <field id="description" translate="label" type="textarea" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Banner Description</label>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

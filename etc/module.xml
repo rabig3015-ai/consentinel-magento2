@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Consentinel Cookie Consent Module Definition.
+ *
+ * @category  Consentinel
+ * @package   Consentinel_CookieConsent
+ * @copyright 2026 Consentinel (https://consentinel.com)
+ * @license   GPL-2.0-or-later
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+    <module name="Consentinel_CookieConsent" setup_version="1.0.0">
+        <sequence>
+            <module name="Magento_Theme"/>
+        </sequence>
+    </module>
+</config>

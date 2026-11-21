@@ -1,0 +1,22 @@
+<?php
+/**
+ * Consentinel Storefront Head Template.
+ * Priority head injection for pre-consent script blocking and cookie banner.
+ *
+ * @var \Consentinel\CookieConsent\Block\Head $block
+ * @category  Consentinel
+ * @package   Consentinel_CookieConsent
+ * @copyright 2026 Consentinel (https://consentinel.com)
+ * @license   GPL-2.0-or-later
+ */
+
+if (!$block->isEnabled()) {
+    return;
+}
+?>
+<!-- Consentinel Pre-Consent Script Blocker & Cookie Consent (High Priority) -->
+<script id="consentinel-config">
+window.ConsentinelConfig = <?= /* @noEscape */ $block->getConfigJson() ?>;
+</script>
+<script id="consentinel-engine" src="<?= $block->escapeUrl($block->getEngineScriptUrl()) ?>" async="false"></script>
+<!-- /Consentinel -->

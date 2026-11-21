@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Consentinel Frontend Default Layout.
+ * Injects Consentinel engine into head.additional before all other scripts.
+ *
+ * @category  Consentinel
+ * @package   Consentinel_CookieConsent
+ * @copyright 2026 Consentinel (https://consentinel.com)
+ * @license   GPL-2.0-or-later
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="head.additional">
+            <block class="Consentinel\CookieConsent\Block\Head"
+                   name="consentinel_head"
+                   template="Consentinel_CookieConsent::head/consentinel.phtml"
+                   before="-" />
+        </referenceBlock>
+    </body>
+</page>

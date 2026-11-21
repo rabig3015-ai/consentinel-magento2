@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Consentinel Cookie Consent Default Configuration.
+ *
+ * @category  Consentinel
+ * @package   Consentinel_CookieConsent
+ * @copyright 2026 Consentinel (https://consentinel.com)
+ * @license   GPL-2.0-or-later
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <consentinel>
+            <general>
+                <enabled>1</enabled>
+                <enable_gcm_v2>1</enable_gcm_v2>
+                <auto_show_banner>1</auto_show_banner>
+            </general>
+            <design>
+                <layout>box</layout>
+                <primary_color>#0f172a</primary_color>
+                <primary_text_color>#ffffff</primary_text_color>
+                <background_color>#ffffff</background_color>
+                <text_color>#1e293b</text_color>
+            </design>
+            <content>
+                <title>We value your privacy</title>
+                <description>We use cookies and similar technologies to enhance site navigation, analyze site usage, and assist in our marketing efforts. You can choose which cookies you allow.</description>
+            </content>
+        </consentinel>
+    </default>
+</config>
